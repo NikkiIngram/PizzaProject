@@ -26,7 +26,7 @@
                         <p style="font-size:1.5vw;">
                             <input type="radio" name ="pizzaSize" value="personal"> &nbsp&nbsp Personal $6.00 <br>
                             <input type="radio" name ="pizzaSize" value="meduim"> &nbsp&nbsp Medium $10.00 <br>
-                            <input type="radio" name ="pizzaSize" value="large" checked> &nbsp&nbsp Large $14.00 <br>
+                            <input type="radio" name ="pizzaSize" value="large" id="defaultSize" checked> &nbsp&nbsp Large $14.00 <br>
                             <input type="radio" name ="pizzaSize" value="xLarge"> &nbsp&nbsp XLarge $16.00
                         </p>
                     </div>
@@ -39,7 +39,7 @@
                     <div class="col-4">
                         <h3 style="font-size:3vw;">Pick Your Crust</h3>
                         <p style="font-size:1.5vw;">
-                            <input type="radio" name ="pizzaCrust" value="plain" checked> &nbsp&nbsp Plain Crust <br>
+                            <input type="radio" name ="pizzaCrust" value="plain" id="defaultCrust" checked> &nbsp&nbsp Plain Crust <br>
                             <input type="radio" name ="pizzaCrust" value="garlicButter"> &nbsp&nbsp Garlic Butter Crust <br>
                             <input type="radio" name ="pizzaCrust" value="cheeseStuffed"> &nbsp&nbsp Cheese Stuffed Crust
                             <small>* add'l $3</small><br>
@@ -50,7 +50,7 @@
                     <div class="col-4">
                         <h3 style="font-size:3vw;">Pick Your Sauce</h3>
                         <p style="font-size:1.5vw;">
-                            <input type="radio" name ="pizzaSauce" value="marinara" checked> &nbsp&nbsp Marinara sauce <br>
+                            <input type="radio" name ="pizzaSauce" value="marinara" id="defaultSauce" checked> &nbsp&nbsp Marinara sauce <br>
                             <input type="radio" name ="pizzaSauce" value="white"> &nbsp&nbsp White sauce <br>
                             <input type="radio" name ="pizzaSauce" value="barbeque"> &nbsp&nbsp Barbeque sauce <br>
                             <input type="radio" name ="pizzaSauce" value="noSauce"> &nbsp&nbsp No Sauce
@@ -90,7 +90,7 @@
                     <div class="col-4">
                         <h3 style="font-size:3vw;">Pick Your Cheese</h3>
                         <p style="font-size:1.5vw;">
-                            <input type="radio" name ="cheeseOption" value="regular" checked> &nbsp&nbsp Regular <br>
+                            <input type="radio" name ="cheeseOption" value="regular" id="defaultCheese" checked> &nbsp&nbsp Regular <br>
                             <input type="radio" name ="cheeseOption" value="noCheese"> &nbsp&nbsp No cheese <br>
                             <input type="radio" name ="cheeseOption" value="extraCheese"> &nbsp&nbsp Extra Cheese
                             <small>* add'l $3</small><br>
@@ -178,6 +178,8 @@
                         <h3 style="font-size:3vw;" id="orderTotal" class="dollars"></h3>
                     </div>
                 </div> 
+                <br><br><br><br>
+                <button type="button" class="btn btn-secondary float-right" onclick="cancel()">Cancel Order</button>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

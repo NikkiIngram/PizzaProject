@@ -143,3 +143,28 @@ function getCheese() {
     cheesePrice.innerHTML = cheeses[pCheese].cost;
     total = total + cheeses[pCheese].cost;
 }
+
+function cancel(){
+    //hide receipt element and unhide order form element
+    var orderForm = document.getElementById("orderForm");
+    orderForm.style.display = "";
+    var receipt = document.getElementById("receipt");
+    receipt.style.display = "none";
+
+    //reset defaults
+    document.getElementById("defaultSize").checked = "true";
+    document.getElementById("defaultCrust").checked = "true";
+    document.getElementById("defaultSauce").checked = "true";
+    document.getElementById("defaultCheese").checked = "true";
+    
+    var meatToppings = document.querySelectorAll("input[name='meat']:checked");
+    resetDefaultCheckBoxes(meatToppings);
+    var vegToppings = document.querySelectorAll("input[name='veggie']:checked");
+    resetDefaultCheckBoxes(vegToppings);
+}
+
+function resetDefaultCheckBoxes(array) {
+    for(i=0; i < array.length; i++){
+        array[i].checked = false;
+    }
+}
