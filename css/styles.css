@@ -1,0 +1,62 @@
+
+#orderForm{
+    background-image: url("../img/pizza-2589577_1920.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: red;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+small {
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    #orderForm {
+        background-image: url("../img/pizza-2589577_1920\ -\ Copy.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        color: red;
+    }
+}
+
+.dollars {
+    text-align: center;
+}
+.dollars:before {
+    content: '$';
+}
+
+.receipt-details {
+    background-color: gray;
+}
+
+.dollars:after {
+    content: '.00';
+}
+
+#receipt{
+    color: red;
+}
+
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    max-width:100%;
+}
+
+#img {
+    background-image: url("../img/pizza-3007395_1920.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    filter: grayscale(75%);
+    height: 100%;
+    max-width:100%;
+}
